@@ -15,10 +15,27 @@ public class Test1{
 //        list.set(i, String.valueOf(list.get(i).length()));
 //    }
 
-        List<Integer> newList = list.stream().map(anus -> anus.length())
-                        .collect(Collectors.toList());
+//        List<Integer> newList = list.stream().map(anus -> anus.length())
+//                        .collect(Collectors.toList());
+//
+//        System.out.println(newList);
 
-        System.out.println(newList);
+//        int[] array = {5, 3, 9, 8, 1};
+//        int[] array2 = Arrays.stream(array).map(anus->{if (anus % 3 == 0){anus=anus/3;}return anus;}).toArray();
+//        System.out.println(Arrays.toString(array2));
+
+        Set<String> set = new TreeSet<>();
+        set.add("one");
+        set.add("three");
+        set.add("five");
+        set.add("eighteen");
+        System.out.println(set);
+
+        Set<Integer> set2 = set.stream().map(e -> e.length()).collect(Collectors.toSet());
+        List<Integer> list2 = set.stream().map(e -> e.length()).collect(Collectors.toList());
+
+        System.out.println(list2);
+        System.out.println(set2);
 
     }
 }
