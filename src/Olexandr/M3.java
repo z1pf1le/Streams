@@ -16,5 +16,7 @@ public class M3 {
                 .reduce((a, b) -> a + b) // Сложить все числа
                 // Вывод результата
                 .ifPresent(System.out::println); // Вывести сумму
+
     }
+
 }
